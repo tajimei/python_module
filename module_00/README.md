@@ -582,7 +582,7 @@ ft_seed_inventory("rose", 5, "kg")
 ---
 
 ### main.py
-```
+```python
 #!/usr/bin/env python3
 
 """
@@ -727,4 +727,28 @@ def main():
 # You don't need to understand this yet, just know it makes the program start
 if __name__ == "__main__":
     main()
+```
+## default paramater (ex6)
+
+```python
+def ft_count_harvest_recursive(i=1,
+                               days=int(input("Days until harvest: "))):
+    print(f"Day {i}")
+    if i == days:
+        print("Harvest time!")
+        return
+    ft_count_harvest_recursive(i+1, days)
+
+
+# ft_count_harvest_recursive(1, 10)
+ft_count_harvest_recursive(days=10)
+```
+## match文
+```python
+  match unit:
+        case "packets":
+            print(f"{name} seeds: {quantity} packets available")
+        
+        case _:
+            print("Unknown unit type")
 ```
