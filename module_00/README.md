@@ -467,3 +467,114 @@ printf("Age: %d", age);  // ageはintのまま、printfが表示を変換
 ```
 
 Cの `printf` が型を変換して表示するのと似た感覚です。`age` 自体の型は変わらないですよね。それと同じです！
+
+ ---
+
+ ## 演習7：型アノテーション付き種子在庫
+
+---
+
+## この演習で新しく学ぶこと
+
+これまでの演習と違い、**引数を受け取る関数**を書きます。
+
+```python
+def ft_seed_inventory(seed_type: str, quantity: int, unit: str) -> None:
+```
+
+`input()` を使わず、**呼び出す側が値を渡します。**
+
+---
+
+## 引数と型ヒントの意味
+
+```python
+def ft_seed_inventory(seed_type: str, quantity: int, unit: str) -> None:
+#                     ↑文字列         ↑整数           ↑文字列    ↑何も返さない
+```
+
+| 引数 | 型 | 意味 |
+|---|---|---|
+| `seed_type` | `str` | 種の種類（例：tomato） |
+| `quantity` | `int` | 数量（例：15） |
+| `unit` | `str` | 単位（例：packets） |
+| `-> None` | なし | 戻り値なし |
+
+---
+
+## 条件分岐の処理
+
+`unit` の値によって表示を変えます。
+
+```python
+def ft_seed_inventory(seed_type: str, quantity: int, unit: str) -> None:
+    name = seed_type.capitalize()  # 先頭を大文字に
+
+    if unit == "packets":
+        print(f"{name} seeds: {quantity} packets available")
+    elif unit == "grams":
+        print(f"{name} seeds: {quantity} grams total")
+    elif unit == "area":
+        print(f"{name} seeds: covers {quantity} square meters")
+    else:
+        print("Unknown unit type")
+```
+
+---
+
+## `capitalize()` とは
+
+文字列の先頭だけ大文字にするメソッドです。
+
+```python
+"tomato".capitalize()  # → "Tomato"
+"carrot".capitalize()  # → "Carrot"
+```
+
+---
+
+## `elif` とは
+
+Cの `else if` と同じ意味です。
+
+```c
+// C
+if (...) { }
+else if (...) { }
+else { }
+```
+
+```python
+# Python
+if ...:
+elif ...:
+else:
+```
+
+---
+
+## 呼び出し方
+
+```python
+ft_seed_inventory("tomato", 15, "packets")
+# → Tomato seeds: 15 packets available
+
+ft_seed_inventory("carrot", 8, "grams")
+# → Carrot seeds: 8 grams total
+
+ft_seed_inventory("lettuce", 12, "area")
+# → Lettuce seeds: covers 12 square meters
+
+ft_seed_inventory("rose", 5, "kg")
+# → Unknown unit type
+```
+
+---
+
+## これまでの演習との違いまとめ
+
+| | 演習0〜6 | 演習7 |
+|---|---|---|
+| 入力方法 | `input()` | 引数で受け取る |
+| 型ヒント | 任意 | **必須** |
+| 呼び出し | 関数名`()` | 関数名`(値, 値, 値)` |
