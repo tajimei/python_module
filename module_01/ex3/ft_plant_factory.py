@@ -1,0 +1,34 @@
+#!/usr/bin/env python3
+
+class Plant:
+    def __init__(self, name: str, height: float, age: int) -> None:
+        self.name: str = name
+        self.height: float = height
+        self.age: int = age
+    def show(self) -> None:
+        height = round(self.height, 1)
+        print(self.name + ": " + str(height) + "cm, "
+              + str(self.age) + " days old")
+    def grow(self) -> None:
+        self.height += 0.8
+    def age(self) -> None:
+        self.age += 1
+
+
+if __name__ == "__main__":
+    rose = Plant("Rose", 25.0, 30)
+    oak = Plant("Oak", 200.0, 365)
+    cactus = Plant("Cactus", 5.0, 90)
+    sunflower = Plant("Sunflower", 80.0, 45)
+    fern = Plant("Fern", 15.0, 120)
+
+    print("Created: ", end="")
+    rose.show()
+    print("Created: ", end="")
+    oak.show()
+    print("Created: ", end="")
+    cactus.show()
+    print("Created: ", end="")
+    sunflower.show()
+    print("Created: ", end="")
+    fern.show()
