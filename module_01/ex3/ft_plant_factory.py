@@ -5,13 +5,15 @@ class Plant:
         self.name: str = name
         self.height: float = height
         self.age: int = age
+
     def show(self) -> None:
         height = round(self.height, 1)
-        print(self.name + ": " + str(height) + "cm, "
-              + str(self.age) + " days old")
+        print(f"{self.name}: {height}cm, {self.age} days old")
+
     def grow(self) -> None:
         self.height += 0.8
-    def age(self) -> None:
+
+    def age_up(self) -> None:
         self.age += 1
 
 

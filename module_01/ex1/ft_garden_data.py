@@ -5,9 +5,10 @@ class Plant:
         self.name: str = ""
         self.height: float = 0
         self.age: int = 0
+
     def show(self) -> None:
-        print(self.name + ": " + str(self.height) + "cm, "
-              + str(self.age) + " days old")
+        print(f"{self.name}: {self.height}cm, {self.age} days old")
+
 
 if __name__ == "__main__":
     print("=== Garden Plant Registry ===")
