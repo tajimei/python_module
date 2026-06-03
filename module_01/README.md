@@ -101,7 +101,17 @@ Age: 30 days
 
 少なくとも3種類の異なる植物のデータを管理し、整理された形で情報を表示するプログラムを作成してください。
 
-**必須：** 各植物を個別に扱うのではなく、任意の植物のモデルとなる`Plant`クラスを作成する必要があります。すべての植物は上記の同じ属性（名前、高さ、樹齢）で記述されます。各植物についてクラスをインスタンス化し、その後属性に具体的な値をセットします。
+**必須：** 各植物を個別に扱うのではなく、任意の植物のモデルとなる`Plant`クラスを作成する必要があります。すべてのprint()
+    print("=== Vegetable")
+    tomato = Vegetable("Tomato", 5.0, 10, "April")
+    tomato.show()
+    print("[make tomato grow and age for 5 days]")
+    for _ in range(5):
+        tomato.grow()
+        tomato.age()
+    tomato.show()
+    print("[statistics for Tomato]")
+    display_stats(tomato)植物は上記の同じ属性（名前、高さ、樹齢）で記述されます。各植物についてクラスをインスタンス化し、その後属性に具体的な値をセットします。
 
 植物情報を表示するための`show()`メソッドをクラス内に作成します。
 
@@ -779,3 +789,17 @@ class Plant:
 `Plant._Stats()` と書くことで「Plantの中の_Statsクラス」を使えます。
 
 ---
+
+```python
+print()
+    print("=== Vegetable")
+    tomato = Vegetable("Tomato", 5.0, 10, "April")
+    tomato.show()
+    print("[make tomato grow and age for 5 days]")
+    for _ in range(5):
+        tomato.grow()
+        tomato.age()
+    tomato.show()
+    print("[statistics for Tomato]")
+    display_stats(tomato)
+```
