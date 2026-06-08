@@ -2,8 +2,6 @@
 
 import sys
 
-import sys
-
 
 def main() -> None:
     args = sys.argv

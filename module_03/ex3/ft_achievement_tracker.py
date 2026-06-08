@@ -10,10 +10,13 @@ ALL_ACHIEVEMENTS = [
     'Night Owl', 'Pacifist', 'Completionist'
 ]
 
+
 def gen_player_achievements() -> set[str]:
-    count = random.randint(3, 10) # 3から10のランダムな数を生成
-    picks = random.sample(ALL_ACHIEVEMENTS, count) # ALL_ACHIEVEMENTSからcount個のランダムな要素を選択
+    count = random.randint(3, 10)  # 3から10のランダムな数を生成
+    # ALL_ACHIEVEMENTSからcount個のランダムな要素を選択
+    picks = random.sample(ALL_ACHIEVEMENTS, count)
     return set(picks)
+
 
 def main() -> None:
     print("=== Achievement Tracker System ===")

@@ -261,7 +261,7 @@ Item least abundant: sword with quantity 1
 Updated inventory: {'sword': 1, 'potion': 5, 'shield': 2, 'armor': 3, 'helmet': 1, 'magic_item': 1}
 ```
 
-> 💡 ゲームの最初、インベントリは通常空っぽです ;)
+> 💡 ゲームの最初、インベントリは通常空っぽです ;
 
 ---
 
