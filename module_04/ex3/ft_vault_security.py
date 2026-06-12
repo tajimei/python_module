@@ -1,8 +1,5 @@
 #! /usr/bin/env python3
 
-import typing
-
-
 def secure_archive(
     filename: str,
     mode: str = "r",
@@ -23,6 +20,7 @@ def secure_archive(
         return (False, str(e))
 
     return (False, "Invalid mode")
+
 
 def main() -> None:
     print("=== Cyber Archives Security ===")

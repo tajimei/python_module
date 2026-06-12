@@ -13,10 +13,8 @@ def main() -> None:
     print("=== Cyber Archives Recovery ===")
     print(f"Accessing file: {filename}")
 
-    file: typing.IO = None
-
     try:
-        file = open(filename, "r")
+        file: typing.IO = open(filename, "r")
     except OSError as e:
         print(f"Error opening file '{filename}': {e}")
         return

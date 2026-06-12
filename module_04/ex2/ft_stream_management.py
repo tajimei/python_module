@@ -13,10 +13,8 @@ def main() -> None:
     print("=== Cyber Archives Recovery & Preservation ===")
     print(f"Accessing file '{filename}'")
 
-    file: typing.IO = None
-
     try:
-        file = open(filename, "r")
+        file: typing.IO = open(filename, "r")
     except OSError as e:
         sys.stderr.write(f"[STDERR] Error opening file '{filename}': {e}\n")
         return
@@ -46,10 +44,8 @@ def main() -> None:
 
     print(f"Saving data to '{save_filename}'")
 
-    save_file: typing.IO = None
-
     try:
-        save_file = open(save_filename, "w")
+        save_file: typing.IO = open(save_filename, "w")
     except OSError as e:
         sys.stderr.write(
             f"[STDERR] Error opening file '{save_filename}': {e}\n")
